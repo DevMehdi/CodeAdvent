@@ -1,9 +1,8 @@
+input = File.readlines('input.txt').map(&:to_i)
 current_frequency = 0
 
-File.open("./input.txt", "r") do |file|
-  file.each_line do |line|
-    current_frequency += line.to_i
-  end
+input.each do |val|
+  current_frequency += val.to_i
 end
 
 puts current_frequency
